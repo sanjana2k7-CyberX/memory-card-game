@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body background="bg.jpg">
+    <div class="game-container">
+	<h1>Memory Card Game</h1>
+        <div id="timer">Time Left: 00:00</div>
+        <label for="difficulty">Select Level:</label>
+        <select id="difficulty">
+            <option value="easy">Easy (4 pairs - 60 seconds)</option>
+            <option value="medium">Medium (6 pairs - 90 seconds)</option>
+            <option value="hard">Hard (8 pairs - 120 seconds)</option>
+        </select>
+        <div class="card-grid"></div>
+        <button id="restart" class="button">Restart Game</button>
+    </div>
+
+    <!-- Victory and Timeout Overlays -->
+    <div id="victory" class="overlay hidden">
+        <h2>🎉 You Won! 🎉</h2>
+        <p>Your Time: <span id="finalTime"></span></p>
+        <button onclick="initializeGame()" class="button">Play Again</button>
+    </div>
+    <div id="timeout" class="overlay hidden">
+        <h2>⏰ Time's Up! ⏰</h2>
+        <p>Better luck next time!</p>
+        <button onclick="initializeGame()" class="button">Try Again</button>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
